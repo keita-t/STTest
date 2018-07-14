@@ -2,6 +2,6 @@
 <name>HelloWorld</name>
 <file>HelloWorld.st</file>
 <filein>HelloWorld.st</filein>
-<file>Test.st</file>
-<filein>Test.st</filein>
+<file>YouSay.st</file>
+<filein>YouSay.st</filein>
 </package>
