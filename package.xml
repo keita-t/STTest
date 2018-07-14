@@ -1,0 +1,7 @@
+<package>
+<name>TestPack</name>
+<file>HelloWorld.st</file>
+<filein>HelloWorld.st</filein>
+<file>Test.st</file>
+<filein>Test.st</filein>
+</package>
