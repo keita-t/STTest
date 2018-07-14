@@ -39,6 +39,6 @@ gst -f temp
 rm temp
 
 #
-# パッケージをイメージにロード
+# パッケージをイメージファイルにロード
 #
 gst-load $load_package -I "$IM_name.im"
