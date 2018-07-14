@@ -3,8 +3,8 @@
 # GNU Smalltalk 環境における簡易的なビルドスクリプト（的なもの）
 #
 
-IM_name='SayYes'         # 保存するイメージファイルの名前
-star_name='HelloWorld'        # 作成するパッケージの名前
+IM_name='SayYes'            # 保存するイメージファイルの名前
+star_name='HelloWorld'      # 作成するパッケージの名前
 load_package="$star_name"   # ロードするパッケージの名前（スペースで区切れば複数定義可能）
 
 #
