@@ -1,5 +1,5 @@
 <package>
-<name>TestPack</name>
+<name>HelloWorld</name>
 <file>HelloWorld.st</file>
 <filein>HelloWorld.st</filein>
 <file>Test.st</file>
