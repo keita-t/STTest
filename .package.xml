@@ -4,4 +4,9 @@
 <filein>src/HelloWorld.st</filein>
 <file>src/YouSay.st</file>
 <filein>src/YouSay.st</filein>
+<test>
+<sunit>HelloWorldTest</sunit>
+<file>test/YouSayTest.st</file>
+<filein>test/YouSayTest.st</filein>
+</test>
 </package>
