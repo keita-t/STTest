@@ -1,7 +1,0 @@
-<package>
-<name>HelloWorld</name>
-<file>HelloWorld.st</file>
-<filein>HelloWorld.st</filein>
-<file>YouSay.st</file>
-<filein>YouSay.st</filein>
-</package>

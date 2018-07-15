@@ -1,0 +1,7 @@
+<package>
+<name>HelloWorld</name>
+<file>src/HelloWorld.st</file>
+<filein>src/HelloWorld.st</filein>
+<file>src/YouSay.st</file>
+<filein>src/YouSay.st</filein>
+</package>
