@@ -5,13 +5,9 @@
 # オプションの処理
 # -i [arg]: 作成するイメージファイルの名前を指定する
 # -p [arg]: 作成するパッケージの名前を指定する
-<<<<<<< HEAD
 # -l [arg]: ロードするパッケージを指定する
 #           (複数指定する場合は文字列として区切って’arg1 arg2...’で指定出来る）
 #
-=======
-# -l [args..]: ロードするパッケージを指定する
->>>>>>> 456835724c584d716498c59467cac9d6de13dc4b
 # -t: SUnit によるテストを実行する
 # -b: プロジェクト下に .star パッケージを作成し、パッケージ作成の詳細を標準出力に表示
 #
@@ -30,10 +26,6 @@ while getopts i:p:l:tb FLAGS; do
     p)  star_name=$OPTARG
         ;;
     l)  load_packages="$OPTARG"
-<<<<<<< HEAD
-=======
-        echo $load_packages
->>>>>>> 456835724c584d716498c59467cac9d6de13dc4b
         ;;
     t)  TEST_FLAG=TRUE
         echo 'Running SUnit'
