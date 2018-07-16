@@ -3,15 +3,29 @@
 # GNU Smalltalk 環境における簡易的なビルドスクリプト（的なもの）
 #
 # オプションの処理
+# -i [arg]: 作成するイメージファイルの名前を指定する
+# -p [arg]: 作成するパッケージの名前を指定する
+# -l [args..]: ロードするパッケージを指定する
 # -t: SUnit によるテストを実行する
-# -b: カレントプロジェクトに .star パッケージを作成し、パッケージ作成の詳細を標準出力に表示
+# -b: プロジェクト下に .star パッケージを作成し、パッケージ作成の詳細を標準出力に表示
 #
+IM_name="IM"
+star_name="Package"
+load_packages=""
+
 TEST_FLAG=FALSE
 BUILD_FLAG=FALSE
 FLAGS=""
 
-while getopts tb FLAGS; do
+while getopts i:p:l:tb FLAGS; do
   case $FLAGS in
+    i)  IM_name=$OPTARG
+        ;;
+    p)  star_name=$OPTARG
+        ;;
+    l)  load_packages="$OPTARG"
+        echo $load_packages
+        ;;
     t)  TEST_FLAG=TRUE
         echo 'Running SUnit'
         ;;
@@ -20,10 +34,6 @@ while getopts tb FLAGS; do
         ;;
   esac
 done
-
-IM_name='SayYes'              # 保存するイメージファイルの名前
-star_name='HelloWorld'        # 作成するパッケージの名前
-load_packages="$star_name"    # ロードするパッケージの名前（スペースで区切れば複数定義可能）
 
 # テストオプションが有効な場合は SUnit を読み込む
 [ $TEST_FLAG = TRUE ] && load_packages="$load_packages SUnit"
@@ -85,7 +95,7 @@ rm $temp
 #
 # パッケージをイメージファイルにロード
 #
-gst-load $load_packages -I "$IM_name.im"
+gst-load $star_name $load_packages -I $IM_name.im
 
 #
 # テストオプションが有効な場合 SUnit を実行
